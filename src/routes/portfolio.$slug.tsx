@@ -62,7 +62,7 @@ function ProjectPage() {
             <div className="surface-card p-5">
               <div className="text-xs uppercase tracking-wider text-muted-foreground">Tech Stack</div>
               <div className="mt-3 flex flex-wrap gap-1.5">
-                {p.tech.map((t) => (
+                {p.tech.map((t: string) => (
                   <span key={t} className="text-xs rounded-full border border-border px-2.5 py-1 text-muted-foreground">{t}</span>
                 ))}
               </div>
@@ -98,7 +98,7 @@ function ProjectPage() {
             <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">Key features</h2>
           </Reveal>
           <div className="mt-8 grid gap-3 md:grid-cols-2">
-            {p.features.map((f, i) => (
+            {p.features.map((f: string, i: number) => (
               <Reveal key={f} delay={i * 0.04}>
                 <div className="surface-card p-5 flex items-start gap-3">
                   <Check className="size-4 mt-0.5 text-foreground" />
