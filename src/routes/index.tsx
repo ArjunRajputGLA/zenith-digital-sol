@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
+import Spline from "@splinetool/react-spline";
 import {
   ArrowRight,
   Rocket,
@@ -95,95 +96,121 @@ function Home() {
 
 function Hero() {
   return (
-    <section className="relative pt-36 pb-24 md:pt-44 md:pb-32 overflow-hidden">
+    <section className="relative pt-36 pb-24 md:pt-44 md:pb-32 overflow-hidden min-h-[90vh] flex items-center">
       <HeroBackground />
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="max-w-3xl">
-          {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
-            <div className="inline-flex items-center gap-2.5 rounded-full border border-border bg-surface/50 backdrop-blur-sm px-4 py-1.5 text-xs text-muted-foreground">
-              <span className="relative flex size-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex rounded-full size-2 bg-emerald-400" />
-              </span>
-              Now booking projects for Q3 — 2 slots left
-            </div>
-          </motion.div>
+      
+      {/* Spline 3D Scene - Absolutely positioned to share the root stacking context for mix-blend-screen */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, delay: 0.5 }}
+        className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-1/2 max-w-[800px] h-[600px] mix-blend-screen z-10 pointer-events-auto"
+      >
+        <Spline 
+          scene="https://prod.spline.design/WUDd1kLf1Uh-ftTW/scene.splinecode" 
+          className="w-full h-full"
+        />
+        <div className="absolute bottom-4 right-5 z-20 pointer-events-none border border-white/10 bg-[#1A1A1A] px-5 py-2.5 rounded-full flex items-center gap-2">
+          <span className="relative flex size-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+            <span className="relative inline-flex rounded-full size-2 bg-emerald-400" />
+          </span>
+          <span className="text-[11px] font-bold text-white tracking-wider uppercase">Interactive</span>
+        </div>
+      </motion.div>
 
-          {/* Heading */}
-          <motion.h1
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-7 text-5xl md:text-7xl lg:text-[5.25rem] font-semibold leading-[1.05] tracking-tight"
-          >
-            Building{" "}
-            <span className="text-gradient animate-gradient bg-[length:200%_auto]">
-              Web, Mobile &amp; AI
-            </span>
-            <br />
-            products that scale.
-          </motion.h1>
-
-          {/* Description */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.35 }}
-            className="mt-7 text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed"
-          >
-            We help startups and growing businesses transform ideas into powerful
-            digital products — through custom software, mobile applications, and
-            AI-powered solutions.
-          </motion.p>
-
-          {/* CTAs */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.45 }}
-            className="mt-9 flex flex-wrap gap-4"
-          >
-            <Link
-              to="/contact"
-              className="group btn-primary animate-pulse-glow"
+      <div className="mx-auto max-w-7xl px-6 relative z-20 w-full pointer-events-none">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="max-w-3xl pointer-events-auto">
+            {/* Badge */}
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
             >
-              Book free consultation
-              <ArrowRight className="size-4 group-hover:translate-x-1 transition-transform duration-300" />
-            </Link>
-            <Link
-              to="/portfolio"
-              className="btn-secondary"
-            >
-              View our work
-            </Link>
-          </motion.div>
-
-          {/* Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.55 }}
-            className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl"
-          >
-            {[
-              { n: 40, suffix: "+", label: "Products shipped" },
-              { n: 10, suffix: "+", label: "Years combined" },
-              { n: 94, suffix: "%", label: "Client retention" },
-              { n: 3, suffix: "", label: "Senior engineers" },
-            ].map(({ n, suffix, label }) => (
-              <div key={label}>
-                <div className="text-2xl md:text-3xl font-semibold text-gradient">
-                  <AnimatedCounter target={n} suffix={suffix} duration={2} />
-                </div>
-                <div className="mt-1.5 text-xs text-muted-foreground tracking-wide">{label}</div>
+              <div className="inline-flex items-center gap-2.5 rounded-full border border-border bg-surface/50 backdrop-blur-sm px-4 py-1.5 text-xs text-muted-foreground">
+                <span className="relative flex size-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                  <span className="relative inline-flex rounded-full size-2 bg-emerald-400" />
+                </span>
+                Now booking projects for Q3 — 2 slots left
               </div>
-            ))}
-          </motion.div>
+            </motion.div>
+
+            {/* Heading */}
+            <motion.h1
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+              className="mt-7 text-5xl md:text-7xl lg:text-[5.25rem] font-semibold leading-[1.05] tracking-tight"
+            >
+              Building{" "}
+              <span className="text-gradient animate-gradient bg-[length:200%_auto]">
+                Web, Mobile &amp; AI
+              </span>
+              <br />
+              products that scale.
+            </motion.h1>
+
+            {/* Description */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.35 }}
+              className="mt-7 text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed"
+            >
+              We help startups and growing businesses transform ideas into powerful
+              digital products — through custom software, mobile applications, and
+              AI-powered solutions.
+            </motion.p>
+
+            {/* CTAs */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.45 }}
+              className="mt-9 flex flex-wrap gap-4"
+            >
+              <Link
+                to="/contact"
+                className="group btn-primary animate-pulse-glow"
+              >
+                Book free consultation
+                <ArrowRight className="size-4 group-hover:translate-x-1 transition-transform duration-300" />
+              </Link>
+              <Link
+                to="/portfolio"
+                className="btn-secondary"
+              >
+                View our work
+              </Link>
+            </motion.div>
+
+            {/* Stats */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.55 }}
+              className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl"
+            >
+              {[
+                { n: 40, suffix: "+", label: "Products shipped" },
+                { n: 10, suffix: "+", label: "Years combined" },
+                { n: 94, suffix: "%", label: "Client retention" },
+                { n: 3, suffix: "", label: "Senior engineers" },
+              ].map(({ n, suffix, label }) => (
+                <div key={label}>
+                  <div className="text-2xl md:text-3xl font-semibold text-gradient">
+                    <AnimatedCounter target={n} suffix={suffix} duration={2} />
+                  </div>
+                  <div className="mt-1.5 text-xs text-muted-foreground tracking-wide">{label}</div>
+                </div>
+              ))}
+            </motion.div>
+          </div>
+
+          {/* Empty spacer to maintain grid layout, Spline is absolutely positioned behind */}
+          <div className="hidden lg:block w-full h-[600px]" />
         </div>
       </div>
     </section>
