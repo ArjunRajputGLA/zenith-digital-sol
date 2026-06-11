@@ -37,10 +37,10 @@ export function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2.5 group">
             <span className="size-8 rounded-lg bg-brand-gradient grid place-items-center text-primary-foreground font-bold text-sm shadow-lg shadow-[var(--brand)]/20 transition-transform duration-300 group-hover:scale-110">
-              A
+              G
             </span>
             <span className="font-display font-semibold tracking-tight text-lg">
-              Antigravity<span className="text-muted-foreground">.labs</span>
+              GLAD<span className="text-muted-foreground"> studio</span>
             </span>
           </Link>
 

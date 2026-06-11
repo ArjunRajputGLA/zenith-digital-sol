@@ -17,13 +17,13 @@ import {
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — Antigravity Labs" },
+      { title: "Services — GLAD studio" },
       {
         name: "description",
         content:
           "MVP development, web and mobile applications, AI solutions and business automation — built by a senior team.",
       },
-      { property: "og:title", content: "Services — Antigravity Labs" },
+      { property: "og:title", content: "Services — GLAD studio" },
       {
         property: "og:description",
         content:

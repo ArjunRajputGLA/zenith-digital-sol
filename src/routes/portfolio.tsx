@@ -10,13 +10,13 @@ import { motion } from "framer-motion";
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
     meta: [
-      { title: "Portfolio — Antigravity Labs" },
+      { title: "Portfolio — GLAD studio" },
       {
         name: "description",
         content:
-          "Selected projects across SaaS, mobile, AI and business automation — built by Antigravity Labs for startups and growing businesses.",
+          "Selected projects across SaaS, mobile, AI and business automation — built by GLAD studio for startups and growing businesses.",
       },
-      { property: "og:title", content: "Portfolio — Antigravity Labs" },
+      { property: "og:title", content: "Portfolio — GLAD studio" },
       {
         property: "og:description",
         content: "Selected projects across SaaS, mobile, AI and business automation.",

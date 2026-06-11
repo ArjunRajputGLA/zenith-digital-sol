@@ -20,10 +20,10 @@ export function Footer() {
           <div className="md:col-span-2">
             <div className="flex items-center gap-2.5">
               <span className="size-8 rounded-lg bg-brand-gradient grid place-items-center text-primary-foreground font-bold text-sm">
-                A
+                G
               </span>
               <span className="font-display font-semibold tracking-tight text-lg">
-                Antigravity.labs
+                GLAD studio
               </span>
             </div>
             <p className="mt-4 max-w-sm text-sm text-muted-foreground leading-relaxed">
@@ -60,7 +60,7 @@ export function Footer() {
           <div>
             <h4 className="text-sm font-semibold mb-4">Contact</h4>
             <ul className="space-y-2.5 text-sm text-muted-foreground">
-              <li><a href="mailto:hello@antigravity.dev" className="hover:text-foreground transition-colors">hello@antigravity.dev</a></li>
+              <li><a href="mailto:hello@gladstudio.dev" className="hover:text-foreground transition-colors">hello@gladstudio.dev</a></li>
               <li><a href="#" className="hover:text-foreground transition-colors">LinkedIn</a></li>
               <li><a href="#" className="hover:text-foreground transition-colors">WhatsApp</a></li>
               <li><Link to="/contact" className="hover:text-foreground transition-colors">Book a call</Link></li>
@@ -70,7 +70,7 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-12 pt-6 border-t border-border flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
-          <p>© {new Date().getFullYear()} Antigravity Labs. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} GLAD studio. All rights reserved.</p>
           <button
             onClick={scrollToTop}
             className="inline-flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors group"

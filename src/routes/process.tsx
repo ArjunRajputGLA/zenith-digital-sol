@@ -9,13 +9,13 @@ import { motion } from "framer-motion";
 export const Route = createFileRoute("/process")({
   head: () => ({
     meta: [
-      { title: "Process — Antigravity Labs" },
+      { title: "Process — GLAD studio" },
       {
         name: "description",
         content:
           "Our development workflow, from discovery call to post-launch support — predictable, transparent, and built to ship.",
       },
-      { property: "og:title", content: "Process — Antigravity Labs" },
+      { property: "og:title", content: "Process — GLAD studio" },
       {
         property: "og:description",
         content: "Our development workflow, from discovery call to post-launch support.",

@@ -11,13 +11,13 @@ import { motion } from "framer-motion";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Antigravity Labs" },
+      { title: "Contact — GLAD studio" },
       {
         name: "description",
         content:
-          "Let's discuss your project. Book a free 30-minute consultation with Antigravity Labs.",
+          "Let's discuss your project. Book a free 30-minute consultation with GLAD studio.",
       },
-      { property: "og:title", content: "Contact — Antigravity Labs" },
+      { property: "og:title", content: "Contact — GLAD studio" },
       {
         property: "og:description",
         content: "Let's discuss your project. Book a free 30-minute consultation.",
@@ -59,10 +59,10 @@ function ContactPage() {
 
             {/* Contact items */}
             <div className="mt-10 space-y-4">
-              <ContactItem icon={Mail} label="Email" value="hello@antigravity.dev" href="mailto:hello@antigravity.dev" />
-              <ContactItem icon={Linkedin} label="LinkedIn" value="linkedin.com/company/antigravity" href="#" />
+              <ContactItem icon={Mail} label="Email" value="hello@gladstudio.dev" href="mailto:hello@gladstudio.dev" />
+              <ContactItem icon={Linkedin} label="LinkedIn" value="linkedin.com/company/gladstudio" href="#" />
               <ContactItem icon={MessageCircle} label="WhatsApp" value="+1 (415) 555-0142" href="#" />
-              <ContactItem icon={Calendar} label="Calendar" value="cal.com/antigravity — 30 min" href="#" />
+              <ContactItem icon={Calendar} label="Calendar" value="cal.com/gladstudio — 30 min" href="#" />
             </div>
 
             {/* Trust badges */}

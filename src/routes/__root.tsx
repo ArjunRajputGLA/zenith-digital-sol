@@ -77,13 +77,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Antigravity Labs — Web, Mobile & AI Product Studio" },
+      { title: "GLAD: Growing Localized Applications Dynamically" },
       {
         name: "description",
         content:
-          "Antigravity Labs is a premium software studio building web apps, mobile apps and AI products for startups and growing businesses.",
+          "GLAD studio is a premium software studio building web apps, mobile apps and AI products for startups and growing businesses.",
       },
-      { property: "og:site_name", content: "Antigravity Labs" },
+      { property: "og:site_name", content: "GLAD studio" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       {

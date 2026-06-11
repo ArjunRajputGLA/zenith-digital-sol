@@ -10,13 +10,13 @@ import { motion } from "framer-motion";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Antigravity Labs" },
+      { title: "About — GLAD studio" },
       {
         name: "description",
         content:
           "We build products, not just software. A senior team of engineers helping startups and businesses bring ideas to life.",
       },
-      { property: "og:title", content: "About — Antigravity Labs" },
+      { property: "og:title", content: "About — GLAD studio" },
       {
         property: "og:description",
         content:
@@ -64,7 +64,7 @@ function AboutPage() {
               We build <span className="text-gradient">products</span>,<br />not just software.
             </h1>
             <p className="mt-7 text-lg text-muted-foreground max-w-2xl leading-relaxed">
-              Antigravity Labs is a small studio of three senior engineers. We help startups
+              GLAD studio is a small studio of three senior engineers. We help startups
               and growing businesses turn ideas into shipped products — web, mobile
               and AI — with the rigor of a great in-house team.
             </p>
@@ -81,7 +81,7 @@ function AboutPage() {
           <Reveal direction="right" delay={0.08}>
             <div className="space-y-5 text-muted-foreground leading-relaxed">
               <p>
-                We started Antigravity Labs because we kept seeing the same thing: founders
+                We started GLAD studio because we kept seeing the same thing: founders
                 spending months on agencies that overpromised, underdelivered, and
                 left them with code they couldn't maintain.
               </p>

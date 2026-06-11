@@ -36,13 +36,13 @@ import { useState } from "react";
 export const Route = createFileRoute("/")(  {
   head: () => ({
     meta: [
-      { title: "Antigravity Labs — Web, Mobile & AI Product Studio" },
+      { title: "GLAD: Growing Localized Applications Dynamically" },
       {
         name: "description",
         content:
           "We help startups and growing businesses ship web apps, mobile apps and AI-powered products that scale.",
       },
-      { property: "og:title", content: "Antigravity Labs — Web, Mobile & AI Product Studio" },
+      { property: "og:title", content: "GLAD: Growing Localized Applications Dynamically" },
       {
         property: "og:description",
         content:
